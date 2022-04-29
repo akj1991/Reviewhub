@@ -22,16 +22,20 @@
           width: 1em;
           margin-left: -1em;
         }
+        
+
         </style>
 </head>
-<body>
+<body style="background-image: url(/static/images/adminbg.webp);">
     <a href="/reviews/templates/home.html" style="margin-left: 20px; ">
         <img src="/static/images/reviewhublogos1.png" style="height: 50px; width: 80px; " alt="">
     </a>
     <br>
     <br>
-<div class="login" style="height: 650px; width: 400px; border: 1px solid rgb(164, 157, 157); background-color: rgb(255, 255, 255); padding: 30px; border-radius: 25px; margin-left: 35%;" >
-    <h5>Sign up</h5>
+<div class="login" style="height: 700px; width: 400px; border: 1px solid rgb(164, 157, 157); background-color: rgb(255, 255, 255); padding: 30px; border-radius: 25px; margin-left: 35%;" >
+ 
+      <h5>Sign up</h5>
+      
     <br>   
     <form>
        
@@ -77,11 +81,26 @@
                             <li>One number</li>
                         </ul>
                     </div>
-            
-                
-              </ul> 
             </div>
         </div>
+        <div class="form-outline mb-4">
+          
+          <form>
+            <p>Please select your category:</p>
+            <center>
+            <label class="radio-inline">
+              <input type="radio" name="optradio" checked>Admin
+            </label>
+            <label class="radio-inline" style="margin-left: 10px;">
+              <input type="radio" name="optradio">Creator
+            </label>
+            <label class="radio-inline" style="margin-left: 10px;">
+              <input type="radio" name="optradio">Follower
+            </label>
+          </center>
+          </form>
+        </div>
+        
           
         </div>
       
