@@ -13,7 +13,7 @@
 
 </head>
 <body style="background-image: url(/static/images/adminbg.png);">
-<a href="/reviews/templates/home.html" style="margin-left: 20px; ">
+<a href="{% url 'home' %}" style="margin-left: 20px; ">
     <img src="/static/images/reviewhublogos1.png" style="height: 50px; width: 80px; " alt="">
 </a>
 <br>
@@ -66,18 +66,18 @@
   
       <div class="col">
         
-        <a href="/static/html/forgetpass.html">Forgot password?</a>
+        <a href="{% url 'forgetpass' %}">Forgot password?</a>
       </div>
     </div>
 
    
   
     
-    <a href="adminhome.html" style="text-decoration: none;"><button type="button" class="btn btn-primary btn-block mb-4" style="background-color: #04aa6d;">Log in</button></a>
+    <a href="{% url 'adminhome' %}" style="text-decoration: none;"><button type="button" class="btn btn-primary btn-block mb-4" style="background-color: #04aa6d;">Log in</button></a>
   
     
     <div class="text-center">
-      <p>Not a member? <a href="/static/html/signup.html">Register</a></p>
+      <p>Not a member? <a href="{% url 'signup1' %}">Register</a></p>
       <p>or sign up with:</p>
       <button type="button" class="btn btn-link btn-floating mx-1">
         <i class="fab fa-facebook-f"></i>

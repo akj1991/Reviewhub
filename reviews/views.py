@@ -2,6 +2,27 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-def fun1(request):
+def homefun(request):
     return render (request,'home.html')
+
+
+def loginfun(request):
+    return render (request,'login.html')
+
+
+def forgetpasfun(request):
+    return render (request,'forgetpass.html')
+
+
+def resetpasfun(request):
+    return render (request,'restpass.html')
+
+
+def adminhomefun(request):
+    return render (request,'adminhome.html')
+
+
+def signupfun(request):
+    return render (request,'signup.html')
+
 

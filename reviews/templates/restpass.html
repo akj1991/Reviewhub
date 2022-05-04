@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 
 </head>
-<body style="background-image: url(/static/images/adminbg.webp);">
-    <a href="/reviews/templates/home.html" style="margin-left: 20px; ">
+<body style="background-image: url(/static/images/adminbg.png);">
+    <a href="{% url 'home' %}" style="margin-left: 20px; ">
         <img src="/static/images/reviewhublogos1.png" style="height: 50px; width: 80px; " alt="">
     </a>
     <br>
@@ -35,7 +35,7 @@
       
         
        
-        <a href="adminhome.html" style="text-decoration: none;"><button type="button" class="btn btn-primary btn-block mb-4" style="background-color: #04aa6d;">Submit</button></a>
+        <a href="{% url 'adminhome' %}" style="text-decoration: none;"><button type="button" class="btn btn-primary btn-block mb-4" style="background-color: #04aa6d;">Submit</button></a>
       
         
       </form>
