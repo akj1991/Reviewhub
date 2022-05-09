@@ -19,10 +19,16 @@ def resetpasfun(request):
 
 
 def adminhomefun(request):
-    return render (request,'adminhome.html')
+    return render (request,'admindashboard.html')
 
 
 def signupfun(request):
     return render (request,'signup.html')
+
+def creatorfun(request):
+    return render (request,'creator.html')
+
+def viewerfun(request):
+    return render (request,'viewers.html')
 
 

@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/logohub.png">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/adminhm.css' %}" type="text/css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a>
+                    <span class="icon"><i class="fa fa-comments-o" aria-hidden="true"></i></span>
+                    <span class="title"><h2>ReviewHub</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'adminhome' %}">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'creator' %}">
+                    <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                    <span class="title">Creators</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'viewers' %}">
+                    <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span class="title">Viewers</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></span>
+                    <span class="title">Reports</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-pencil-square" aria-hidden="true"></i></span>
+                    <span class="title">Edit</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                    <span class="title">Update</span>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="title">Logout</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Search here">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>  
+            </div>
+            <div class="user">
+                <img src={% static 'images/Kayla-person.jpg' %}>
+            </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                <div>
+                    <div class="numbers">1,042</div>
+                    <div class="cardname">Daily Views</div>
+                </div>
+                <div class="iconBox">
+                    <i class="fa fa-eye" aria-hidden="true"></i>   
+                </div>
+                </div>
+
+                <div class="card">
+                <div>
+                    <div class="numbers">$40,000</div>
+                    <div class="cardname">Revenue</div>
+                </div>
+                <div class="iconBox">
+                    <i class="fa fa-usd" aria-hidden="true"></i>   
+                </div>
+                </div>
+
+                <div class="card">
+                <div>
+                    <div class="numbers">200</div>
+                    <div class="cardname">Watch Time</div>
+                </div>
+                <div class="iconBox">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>   
+                </div>
+                </div>
+
+                <div class="card">
+                <div>
+                    <div class="numbers">50</div>
+                    <div class="cardname">Comments</div>
+                </div>
+                <div class="iconBox">
+                    <i class="fa fa-comments" aria-hidden="true"></i>   
+                </div>
+                </div>
+            </div>
+
+            
+            </div>
+    </div>
+    
+</div>  
+    
+    
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+
+    
+    
+</body>
+</html>

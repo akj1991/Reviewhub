@@ -5,6 +5,8 @@ urlpatterns = [
     path('login/', views.loginfun,name="login"),
     path('login/forgetpass/', views.forgetpasfun,name="forgetpass"),
     path('login/forgetpass/resetpass/', views.resetpasfun,name="resetpass"),
-    path('adminhome/', views.adminhomefun,name="adminhome"),
+    path('dashboard/', views.adminhomefun,name="adminhome"),
     path('signup/', views.signupfun,name="signup1"),
+    path('dashboard/creator/', views.creatorfun,name="creator"),
+    path('dashboard/viewers/', views.viewerfun,name="viewers"),
 ]
