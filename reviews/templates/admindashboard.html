@@ -40,25 +40,31 @@
                 </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{% url 'viewers' %}">
+                    <span class="icon"><i class="fa fa-bell" aria-hidden="true"></i></span>
+                    <span class="title">Requests</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'viewers' %}">
+                    <span class="icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
+                    <span class="title">Settings</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'reports' %}">
                     <span class="icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></span>
                     <span class="title">Reports</span>
                 </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{% url 'edit' %}">
                     <span class="icon"><i class="fa fa-pencil-square" aria-hidden="true"></i></span>
                     <span class="title">Edit</span>
                 </a>
                 </li>
                 <li>
-                    <a href="#">
-                    <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                    <span class="title">Update</span>
-                </a>
-                </li>
-                <li>
-                    <a href="#">
+                    <a href="{% url 'home' %}">
                     <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
                     <span class="title">Logout</span>
                 </a>
@@ -76,10 +82,10 @@
                 </label>  
             </div>
             <div class="user">
-                <img src={% static 'images/Kayla-person.jpg' %}>
+                <img src="{% static 'images/Kayla-person.jpg' %}">
             </div>
             </div>
-
+            {% block content %}
             <div class="cardBox">
                 <div class="card">
                 <div>
@@ -121,8 +127,127 @@
                 </div>
                 </div>
             </div>
-
-            
+            {% endblock %}
+         <div class="details">
+             <div class="recentUploads">
+                 <div class="cardHeader">
+                     <h2>Recent Uploads</h2>
+                     <a href="#" class="btn">View All</a>
+                 </div>
+                 <table>
+                   <thead>
+                       <tr>
+                           <td>Name</td>
+                           <td>Category</td>
+                           <td>Creator</td>
+                           <td>Length</td>
+                           <td>Views</td>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>Motorola Edge 30</td>
+                           <td>Mobile</td>
+                           <td>C4ETech</td>
+                           <td>25 min</td>
+                           <td><span class="views above100k">100K</span></td>
+                       </tr>
+                   </tbody>
+                   <tbody>
+                    <tr>
+                        <td>New Baleno 2022</td>
+                        <td>Automobile</td>
+                        <td>Biju M Nair</td>
+                        <td>36 min</td>
+                        <td><span class="views above200k">250K</span></td>
+                    </tr>
+                </tbody> 
+                <tbody>
+                    <tr>
+                        <td>SuperFan X1</td>
+                        <td>Home Accessories</td>
+                        <td>AkjTech</td>
+                        <td>20 min</td>
+                        <td><span class="views above50k">80K</span></td>
+                    </tr>
+                </tbody> 
+                <tbody>
+                    <tr>
+                        <td>Amazfit GTR 2e</td>
+                        <td>Smart Watch</td>
+                        <td>Tech Spurt</td>
+                        <td>23 min</td>
+                        <td><span class="views above100k">150K</span></td>
+                    </tr>
+                </tbody> 
+                <tbody>
+                    <tr>
+                        <td>Hp 15da007</td>
+                        <td>Laptop</td>
+                        <td>Tomz Tech</td>
+                        <td>19 min</td>
+                        <td><span class="views above50k">90K</span></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Xioami 11i</td>
+                        <td>Mobile</td>
+                        <td>Geeky Ranjith</td>
+                        <td>24 min</td>
+                        <td><span class="views above100k">140K</span></td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>Tata Harrier</td>
+                        <td>Automobile</td>
+                        <td>AutoTech</td>
+                        <td>35 min</td>
+                        <td><span class="views above200k">210K</span></td>
+                    </tr>
+                </tbody> 
+                <tbody>
+                    <tr>
+                        <td>Ashaway Q11</td>
+                        <td>Sports</td>
+                        <td>Joshisports</td>
+                        <td>19 min</td>
+                        <td><span class="views above50k">75K</span></td>
+                    </tr>
+                </tbody>  
+                 </table>
+             </div>
+             <div class="recentCreators">
+                <div class="cardHeader">
+                    <h2>Recent Creators</h2>
+                </div>
+                <table>
+                    <tbody>
+                       <tr>
+                           <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                           <td><h4>AkjTech<br><span>India</span></h4></td>
+                       </tr>
+                       <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr> 
+                    </tbody>
+                </table>
+            </div>
+         </div>   
             </div>
     </div>
     
@@ -143,11 +268,12 @@
 
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
 
-    
+
     
 </body>
 </html>

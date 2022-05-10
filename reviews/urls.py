@@ -9,4 +9,6 @@ urlpatterns = [
     path('signup/', views.signupfun,name="signup1"),
     path('dashboard/creator/', views.creatorfun,name="creator"),
     path('dashboard/viewers/', views.viewerfun,name="viewers"),
+    path('dashboard/reports/', views.reportsfun,name="reports"),
+    path('dashboard/edit/', views.editfun,name="edit"),
 ]

@@ -5,22 +5,17 @@ from django.shortcuts import render
 def homefun(request):
     return render (request,'home.html')
 
-
 def loginfun(request):
     return render (request,'login.html')
-
 
 def forgetpasfun(request):
     return render (request,'forgetpass.html')
 
-
 def resetpasfun(request):
     return render (request,'restpass.html')
 
-
 def adminhomefun(request):
     return render (request,'admindashboard.html')
-
 
 def signupfun(request):
     return render (request,'signup.html')
@@ -30,5 +25,11 @@ def creatorfun(request):
 
 def viewerfun(request):
     return render (request,'viewers.html')
+
+def reportsfun(request):
+    return render (request,'reports.html')
+
+def editfun(request):
+    return render (request,'edit.html')
 
 
