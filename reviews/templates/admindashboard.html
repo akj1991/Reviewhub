@@ -40,13 +40,13 @@
                 </a>
                 </li>
                 <li>
-                    <a href="{% url 'viewers' %}">
+                    <a href="{% url 'request' %}">
                     <span class="icon"><i class="fa fa-bell" aria-hidden="true"></i></span>
                     <span class="title">Requests</span>
                 </a>
                 </li>
                 <li>
-                    <a href="{% url 'viewers' %}">
+                    <a href="{% url 'settings' %}">
                     <span class="icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
                     <span class="title">Settings</span>
                 </a>
@@ -58,9 +58,9 @@
                 </a>
                 </li>
                 <li>
-                    <a href="{% url 'edit' %}">
-                    <span class="icon"><i class="fa fa-pencil-square" aria-hidden="true"></i></span>
-                    <span class="title">Edit</span>
+                    <a href="{% url 'upvideos' %}">
+                    <span class="icon"><i class="fa fa-video-camera" aria-hidden="true"></i></i></span>
+                    <span class="title">Uploaded Videos</span>
                 </a>
                 </li>
                 <li>
@@ -127,12 +127,11 @@
                 </div>
                 </div>
             </div>
-            {% endblock %}
          <div class="details">
              <div class="recentUploads">
                  <div class="cardHeader">
                      <h2>Recent Uploads</h2>
-                     <a href="#" class="btn">View All</a>
+                     <a href="{% url 'upvideos' %}" class="btn">View All</a>
                  </div>
                  <table>
                    <thead>
@@ -233,21 +232,38 @@
                         <td><h4>AkjTech<br><span>India</span></h4></td>
                     </tr>
                     <tr>
-                        <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/Kayla-person.jpg' %}"></div></td>
                         <td><h4>AkjTech<br><span>India</span></h4></td>
                     </tr>
                     <tr>
-                        <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/youtube1.jpeg' %}"></div></td>
                         <td><h4>AkjTech<br><span>India</span></h4></td>
                     </tr>
                     <tr>
-                        <td width="60px"><div class="imgBx"><img src="{% static 'images/C4ETech.jpeg' %}"></div></td>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/tomz.jpeg' %}"></div></td>
                         <td><h4>AkjTech<br><span>India</span></h4></td>
                     </tr> 
+                    <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/tomz.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/tomz.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/tomz.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr>
+                    <tr>
+                        <td width="60px"><div class="imgBx"><img src="{% static 'images/tomz.jpeg' %}"></div></td>
+                        <td><h4>AkjTech<br><span>India</span></h4></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
-         </div>   
+         </div> 
+         {% endblock %}
             </div>
     </div>
     

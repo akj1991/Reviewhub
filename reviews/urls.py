@@ -10,5 +10,7 @@ urlpatterns = [
     path('dashboard/creator/', views.creatorfun,name="creator"),
     path('dashboard/viewers/', views.viewerfun,name="viewers"),
     path('dashboard/reports/', views.reportsfun,name="reports"),
-    path('dashboard/edit/', views.editfun,name="edit"),
+    path('dashboard/requests/', views.requestsfun,name="request"),
+    path('dashboard/settings/', views.settingsfun,name="settings"),
+    path('dashboard/uploaded-videos-list/', views.uploadvideofun,name="upvideos"),
 ]

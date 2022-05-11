@@ -29,7 +29,13 @@ def viewerfun(request):
 def reportsfun(request):
     return render (request,'reports.html')
 
-def editfun(request):
-    return render (request,'edit.html')
+def requestsfun(request):
+    return render (request,'Requests.html')
+
+def settingsfun(request):
+    return render (request,'settings.html')
+
+def uploadvideofun(request):
+    return render (request,'uploadedvideos.html')
 
 

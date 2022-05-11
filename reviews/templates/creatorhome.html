@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/images/logohub.png">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/adminhm.css' %}" type="text/css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a>
+                    <span class="icon"><i class="fa fa-comments-o" aria-hidden="true"></i></span>
+                    <span class="title"><h2>ReviewHub</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'adminhome' %}">
+                    <span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+                    <span class="title">Dashboard</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'creator' %}">
+                    <span class="icon"><i class="fa fa-users" aria-hidden="true"></i></span>
+                    <span class="title">Creators</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'viewers' %}">
+                    <span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <span class="title">Viewers</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'request' %}">
+                    <span class="icon"><i class="fa fa-bell" aria-hidden="true"></i></span>
+                    <span class="title">Requests</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'settings' %}">
+                    <span class="icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
+                    <span class="title">Settings</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'reports' %}">
+                    <span class="icon"><i class="fa fa-bar-chart" aria-hidden="true"></i></span>
+                    <span class="title">Reports</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'upvideos' %}">
+                    <span class="icon"><i class="fa fa-video-camera" aria-hidden="true"></i></i></span>
+                    <span class="title">Uploaded Videos</span>
+                </a>
+                </li>
+                <li>
+                    <a href="{% url 'home' %}">
+                    <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+                    <span class="title">Logout</span>
+                </a>
+                </li>
+            </ul>
+        </div>

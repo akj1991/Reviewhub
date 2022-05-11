@@ -187,6 +187,7 @@ align-items: center;
     justify-content: space-between;
     cursor: pointer;
     border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 
 .cardBox .card .numbers{
@@ -208,17 +209,18 @@ align-items: center;
     position: relative;
     width: 100%;
     padding: 20px;
-    padding-top: 20px;
+    padding-top: 5px;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 2fr 1fr;
 }
 .details .recentUploads{
     position: relative;
-    /* display: grid; */
     min-height: 530px;
     background: #fff;
     padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 .cardHeader{
     display: flex;
@@ -251,10 +253,9 @@ align-items: center;
 
 .details .recentUploads table tr{
 border-bottom: 1px solid rgba(0,0,0,0.1);
+cursor: pointer;
 }
-/* .details .recentUploads table tbody tr:last-child{
-border-bottom: none;
-} */
+
 .details .recentUploads table tbody tr:hover{
     background: #03a9f4;
     color: #fff;
@@ -305,16 +306,194 @@ border-bottom: none;
 
 .details .recentCreators{
 position: relative;
-/* display: grid; */
+display: grid;
 min-height: 530px;
 background: #fff;
 padding: 20px;
+cursor: pointer;
+border-radius: 5px;
+box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 
 .details .recentCreators .imgBx{
-   position: relative;
-   width: 40px;
-   height: 40px;
-   border-radius: 50%;
-   overflow: hidden; 
+    position: relative;
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+      
 }
+
+.details .recentCreators .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+.details .recentCreators table tr td h4 span{
+    font-size: 14px;
+    color: #999;
+}
+.details .recentCreators table tr:hover,
+.details .recentCreators table tr:hover td h4 span{
+    background: #03a9f4;
+    color: #fff;
+}
+.details .recentCreators table tr td{
+    padding: 7px 10px;
+}
+.details .recentCreators table tr td h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+
+/* make it responsive */
+ @media (max-width: 992px)
+ {
+     .navigation
+     {
+        left: -250px; 
+     }
+     .navigation.active
+     {
+         left: 0;
+         width: 250px;
+     }
+     .main
+     {
+        width: 100%;
+        left: 0;
+     }
+     .main.active
+     {
+         width: calc(100% - 250px);
+         left: 250px
+     }
+     .cardBox
+     {
+        grid-template-columns: repeat(4,1fr);
+    }    
+ }
+
+ @media (max-width: 758px)
+ {
+    .details
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2
+    {
+        font-weight: 600;
+        font-size: 18px;
+    }
+ }
+
+ @media (max-width: 480px)
+ {
+    .cardBox 
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details .recentUploads
+    {
+        overflow-x: auto;
+    }
+    .details .recentUploads table
+    {
+        width: 600px;
+
+    }
+    .navigation
+    {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active
+    {
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active
+    {
+        position: fixed;
+        z-index: 10000;
+        right: 0;
+        left: initial;
+    }
+    .toggle.active::before
+    {
+        color: #fff;
+    }
+    .main,
+    .main.active
+    {
+       width: 100%;
+       left: 0; 
+    }
+ }
+
+ /* creator table */
+ .creator-title
+ {
+    padding-top: 10px;
+    color: #009879;
+    font-size: 2em;
+    text-align: center;
+ }
+
+ .creator-table
+ { 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px; 
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+ }
+
+ .creator-table thead tr
+ {
+     background-color: #009879;
+     color: #fff;
+     text-align: center;
+     font-weight: bold;
+ }
+
+ .creator-table th,
+ .creator-table td
+ {
+     padding: 12px 15px;
+ }
+
+ .creator-table tbody tr
+ {
+     text-align: center;
+    border-bottom: 1px solid #dddddd;
+ }
+
+ .creator-table tbody tr:nth-of-type(even)
+ {
+     background-color: #ebdddd;
+ }
+
+ .creator-table tbody tr:last-of-type
+ {
+     border-bottom: 1px solid #009879;
+ }
+
+ .creator-table tbody tr:hover
+ {
+     background: #03a9f4;
+     color: #fff;
+ }
+
