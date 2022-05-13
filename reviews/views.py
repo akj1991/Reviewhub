@@ -12,7 +12,7 @@ def forgetpasfun(request):
     return render (request,'forgetpass.html')
 
 def resetpasfun(request):
-    return render (request,'restpass.html')
+    return render (request,'resetpass.html')
 
 def adminhomefun(request):
     return render (request,'admindashboard.html')
@@ -37,5 +37,23 @@ def settingsfun(request):
 
 def uploadvideofun(request):
     return render (request,'uploadedvideos.html')
+
+def creloginfun(request):
+    return render (request,'creatorLogin.html')
+
+def viewerloginfun(request):
+    return render (request,'viewerLogin.html')
+
+def creatorforpassfun(request):
+    return render (request,'creatorforgetpass.html')
+
+def creatorrestpassfun(request):
+    return render (request,'creatorresetpass.html')
+
+def viewerforpassfun(request):
+    return render (request,'viewerforgetpass.html')
+
+def viewerrestpassfun(request):
+    return render (request,'viewerresetpass.html')
 
 

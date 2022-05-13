@@ -13,4 +13,10 @@ urlpatterns = [
     path('dashboard/requests/', views.requestsfun,name="request"),
     path('dashboard/settings/', views.settingsfun,name="settings"),
     path('dashboard/uploaded-videos-list/', views.uploadvideofun,name="upvideos"),
+    path('login/creatorlogin/', views.creloginfun,name="creatorlogin"),
+    path('login/viewerlogin/', views.viewerloginfun,name="viewerlogin"),
+    path('login/creatorlogin/creatorforgotpass/', views.creatorforpassfun,name="creatorforgetpass"),
+    path('login/creatorlogin/creatorforgotpass/creatorresetpassword/', views.creatorrestpassfun,name="creatorresetpass"),
+    path('login/viewerlogin/viewerforgotpass/', views.viewerforpassfun,name="viewerforgotpass"),
+    path('login/viewerlogin/viewerforgotpass/viewerresetpassword/', views.viewerrestpassfun,name="viewerresetpass"),
 ]
