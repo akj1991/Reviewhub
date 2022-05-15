@@ -9,6 +9,10 @@
     <link rel="icon" href="{% static 'images/logohub.png' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static '/css/home.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <style>
   p{
@@ -19,7 +23,7 @@
   }
 </style>
 
-<body style="margin: 0px;">
+<body>
   <div class="container-fluid">
     <div class="row">  
       <div class="col-lg-12" style="background-image: url(/static/images/homebg.jpeg); background-size: cover; background-repeat: no-repeat; height:500px; width: 100%; ">
@@ -72,11 +76,11 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#282a35; height: 300px; width: 100%;" >
+      <div class="img-class" style="background-color:#282a35; height: 300px; width: 100%;" >
         <h3 style="color: rgb(255, 255, 255); padding-top: 40px;">How it works</h3>
         <br>
         <img src="{% static 'images/howitworks.png' %}" style="width: 900px; height: 90px;">
-        <div class="row" style="padding-top: 20px; height: 200px; width: 100%;">
+        <div class="row" style="height: 70px; width: 100%; background-color: #ce519a  ;">
           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="background-color:#282a35; height: 80px; " >
             <p style="color: rgb(255, 255, 255);  font-size: medium; padding-left: 40px;">1. Join Reviewhub - and Create space.</p>
           </div> 
@@ -90,23 +94,107 @@
             <p style="color: rgb(255, 255, 255); font-size: medium;">4.  Share your videos with your followers.</p>
           </div>
           </div>
-        </center>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#ffffff;  height: 140px; width: 100%;"  > 
-                <br>
-                <br>
-                <br>
-                <hr>
-                <p style="padding-left: 20px; padding-right: 20px;">&copy;Copyright 2022 Reviewhub
-                  <a href="https://www.instagram.com/" style="padding-left: 20px; float: right;"><img src="{% static 'images/instalogo.png' %}" alt="" style="width: 27px; height: 27px;"></a>
-                  <a href="https://www.facebook.com/" style="padding-left: 20px;  float: right;"><img src="{% static 'images/facebooklogo1.png' %}" alt="" style="width: 28px; height: 28px;"></a>
-                  <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="padding-left: 20px; float: right;"><img src="{% static 'images/twitterlogo.png' %}" alt="" style="width: 28px; height: 28px;"></a>
-                <a style="float: right; padding-left: 20px; text-decoration: none;" href="">Privacy Policy</a>
-                <a style="float: right; padding-left: 20px; text-decoration: none;" href="">Support</a>
-                <a style="float: right; text-decoration: none;" href="">Terms of Service</a>
-                
-              </p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+                <footer class="text-center text-lg-start text-white" style="background-color: #441154; padding-top: 1px;">
+                  <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                   
+                      <div class="row mt-3">
+                       
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        
+                          <h6 class="text-uppercase fw-bold">ReviewHub</h6>
+                          <hr
+                              class="mb-4 mt-0 d-inline-block mx-auto"
+                              style="width: 100px; background-color: #7c4dff; height: 2px"
+                              />
+                          <p style="text-align: justify;">
+                            Here you can upload & view all product related reviews on different category. This is basically a collection of review videos uploaded by different creators on their profile. Viewers can watch these videos and know more about different products.
+                          </p>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                         
+                          <h6 class="text-uppercase fw-bold">Useful links</h6>
+                          <hr
+                              class="mb-4 mt-0 d-inline-block mx-auto"
+                              style="width: 100px; background-color: #7c4dff; height: 2px"
+                              />
+                          <p>
+                            <a href="{% url 'creatorlogin' %}" class="text-white">Creator Account</a>
+                          </p>
+                          <p>
+                            <a href="{% url 'viewerlogin' %}" class="text-white"> Viewer Account</a>
+                          </p>
+                          <p>
+                            <a href="#!" class="text-white">Help</a>
+                          </p>
+                        </div>
+                        
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                       
+                          <h6 class="text-uppercase fw-bold">Contact</h6>
+                          <hr
+                              class="mb-4 mt-0 d-inline-block mx-auto"
+                              style="width: 100px; background-color: #7c4dff; height: 2px"
+                              />
+                          <p><i class="fas fa-home mr-3"></i> Calicut, KL 673603, IN</p>
+                          <p><i class="fas fa-envelope mr-3"></i> info@reviewhub.com</p>
+                          <p><i class="fas fa-phone mr-3"></i> + 91 934 567 88</p>
+                          <p><i class="fas fa-print mr-3"></i> + 91 994 567 89</p>
+                        </div>
+                     
+                      </div>
+                      
+                    </div>
+                  </section>
+                 
+                  <div class="text-center1" style="background-color: #455d8d">
+                    <div class="social">
+                      <span>Get connected with us on social networks:</span>
+                    </div>
+                    <div class="social">
+                    <a href="https://www.facebook.com/" class="text-white1 me-4">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="text-white1 me-4">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.google.com/" class="text-white1 me-4">
+                      <i class="fab fa-google"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="text-white1 me-4">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="text-white1 me-4">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/" class="text-white1 me-4">
+                      <i class="fab fa-github"></i>
+                    </a>
+                    </div>
+                </div>
+
+               
+                  <div
+                       class="text-center p-3"
+                       style="background-color: rgba(0, 0, 0, 0.2)"
+                       >
+                    © 2020 Copyright:
+                    <a class="text-white" href=""
+                       >Reviewhub.com</a
+                      >
+                  </div>
+               
+                </footer>
+               
+              
+              </div>
    
 
   

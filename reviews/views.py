@@ -18,7 +18,7 @@ def adminhomefun(request):
     return render (request,'admindashboard.html')
 
 def signupfun(request):
-    return render (request,'signup.html')
+    return render (request,'registration.html')
 
 def creatorfun(request):
     return render (request,'creator.html')
