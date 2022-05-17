@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <!-- <script src="{% static '/javaScript/registration.js' %}"></script> -->
 
 </head>
@@ -22,33 +24,33 @@
     </div>
     <div class="container">
         <div class="title">Registration</div>
-        <form action="#" >
-            <div class="user-details" id="form">
-                <div class="input-box success">
+        <form action="#" id="form" name="">
+            <div class="user-details">
+                <div class="input-box">
                     <span class="details">Full name</span>
-                    <input type="text" placeholder="Enter your name" id="name" onkeyup="return validation()">
+                    <input type="text" placeholder="Enter your name" id="name">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
-                <div class="input-box error">
+                <div class="input-box">
                     <span class="details">Username</span>
-                    <input type="text" placeholder="Enter your username" id="username" required>
+                    <input type="text" placeholder="Enter your username" id="username">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="text" placeholder="Enter your email" id="email" required>
+                    <input type="text" placeholder="Enter your email" id="email">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
                 <div class="input-box">
-                    <span class="details">Phone number</span>
+                    <span class="details" >Phone number</span>
                     <select name="countryCode" id="phonenumber">
-                        <option data-countryCode="IN" value="91" selected>India (+91)</option>
+                        <option data-countryCode="IN" value="91" selected >India (+91)</option>
                         <option data-countryCode="GB" value="44">UK (+44)</option>
                         <option data-countryCode="US" value="1">USA (+1)</option>
                         <optgroup label="Other countries">
@@ -137,7 +139,7 @@
                             <option data-countryCode="HK" value="852">Hong Kong (+852)</option>
                             <option data-countryCode="HU" value="36">Hungary (+36)</option>
                             <option data-countryCode="IS" value="354">Iceland (+354)</option>
-                            <!-- <option data-countryCode="IN" value="91">India (+91)</option> -->
+                            <option data-countryCode="IN" value="91">India (+91)</option>
                             <option data-countryCode="ID" value="62">Indonesia (+62)</option>
                             <option data-countryCode="IR" value="98">Iran (+98)</option>
                             <option data-countryCode="IQ" value="964">Iraq (+964)</option>
@@ -265,7 +267,8 @@
                             <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                             <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                         </optgroup>
-                    </select>  
+                    </select>
+                    <input type="tel" id="phonenumber1" name="phone"/>  
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>              
@@ -473,21 +476,21 @@
                 </div>
                 <div class="input-box">
                     <span class="details">Age</span>
-                    <input type="number" placeholder="Enter your Age" id="age" required>
+                    <input type="number" placeholder="Enter your Age" id="age" >
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input type="password" placeholder="Enter your password" id="password" onkeyup="return validation()">
+                    <input type="password" placeholder="Enter your password" id="password" >
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input type="password" placeholder="Confirm your password" id="repassword" required>
+                    <input type="password" placeholder="Confirm your password" id="repassword">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
@@ -518,6 +521,7 @@
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
             </div>
+            <br>
             <div class="form-check" >
                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
                 <label class="form-check-label" for="form2Example3">
@@ -529,10 +533,10 @@
                     <small>Error message</small>
             <div class="submit-session">
                 
-                <button type="reset" class="button1" >Reset all</button>
+                <button type="reset" class="button1">Reset all</button>
                 <span></span>
                 <button type="submit" class="button2">Register</button>
-              <!-- <input type="submit" value="Register">   -->
+              
             </div>
             <div class="text-center">
                 <p>or sign up with:</p>
@@ -552,47 +556,136 @@
         </form>
     </div>
 
-
-<script>
-    function validation(){
-        status=1
-         user=document.getElementById('username')
-         pass=document.getElementById('password').value
-         if(user.value == ""){
-             //username.style.borderColor="red"
-             //username_error.innerHTML="Please Enter Username"
-             document.getElementById('username_error').innerHTML="Please Enter Username"
-             document.getElementById('username').style.borderColor="red"
-             username_error.style.color="red"
-             username_error.style.display="block"
-             status=0
-         }
-         else{
-             username.style.borderColor="black"
-             username_error.style.display="none"
-             status=1
-         }
-         if(pass==""){
-            document.getElementById('password').style.borderColor="red" 
-            document.getElementById('password_error').innerHTML="Please Enter Password"
-            password_error.style.display="block"
-            password_error.style.color="red"
-            status=0
-           } 
-           else{
-            password.style.borderColor="black"
-            password_error.style.display="none"
-            status=1
-        }
-        if(status==0){
-            return false
-        }
-        else if(status==1){
-            return true
-       }
     
+
+   
+<script>
+        const form = document.getElementById('form');
+        const name = document.getElementById('name');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const phonenumber = document.getElementById('phonenumber1');
+        const nationality = document.getElementById('nationality');
+        const age = document.getElementById('age');
+        const password = document.getElementById('password');
+        const repassword = document.getElementById('repassword');
+      //  const gender = document.getElementsByName("gender");
+        
+        form.addEventListener('submit', e=> {
+            e.preventDefault();
+        
+            checkInputs();
+        });
+        
+        function checkInputs() {
+            const nameValue = name.value.trim();
+            const usernameValue = username.value.trim();
+            const emailValue = email.value.trim();
+            const passwordValue = password.value.trim();
+            const repasswordValue = repassword.value.trim();
+            const nationalityValue = nationality.value.trim();
+            const ageValue = age.value.trim();
+            const phonenumberValue = phonenumber1.value.trim();
+           // const genderValue = gender.value.trim();
+        
+            if(nameValue === '') {
+                setErrorFor(name, 'Name cannot be blank');
+            } else {
+                setSuccessFor(name);
+            }
+
+            if(usernameValue === '') {
+                setErrorFor(username, 'Username cannot be blank');
+            } else {
+                setSuccessFor(username);
+            }
+        
+            if(emailValue === '') {
+                setErrorFor(email, 'Email cannot be blank');
+            } else if (!isEmail(emailValue)) {
+                setErrorFor(email, 'Not a valid email');
+            } else {
+                setSuccessFor(email);
+            }
+
+            if(nationalityValue === '') {
+                setErrorFor(nationality, 'Select Nationality');
+            } else {
+                setSuccessFor(nationality);
+            }
+
+            if(ageValue === '') {
+                setErrorFor(age, 'Enter your age');
+            } else {
+                setSuccessFor(age);
+            }
+
+            if(phonenumberValue === '') {
+                setErrorFor(phonenumber1, 'Enter your phone number');
+            } else if (!isPhone(phonenumberValue)) {
+                setErrorFor(phonenumber1, 'Not a valid phone number');
+            } else {
+                setSuccessFor(phonenumber1);
+            }
+            
+            if(passwordValue === '') {
+                setErrorFor(password, 'Password cannot be blank');
+            } else {
+                setSuccessFor(password);
+            }
+            
+            if(repasswordValue === '') {
+                setErrorFor(repassword, 'Re enter password');
+            } else if(passwordValue !== repasswordValue) {
+                setErrorFor(repassword, 'Passwords does not match');
+            } else{
+                setSuccessFor(repassword);
+            }
+
+            //if( (gender[0].checked == false) && (gender[1].checked == false)){
+           //     setErrorFor(gender, 'Please provide your gender!');
+           // }   else{
+            //        setSuccessFor(gender);
+             //   }
+            if(genderValue === '') {
+                setErrorFor(gender, 'Name cannot be blank');
+            } else {
+                setSuccessFor(gender);
+            }
         }
-</script>
+        
+        function setErrorFor(input, message) {
+            const inputBox = input.parentElement;
+           // const genderBox = input.gender-details;
+            const small = inputBox.querySelector('small');
+            //const small1 = genderBox.querySelector('small');
+            inputBox.className = 'input-box error';
+           // genderBox.className = 'gender-details error';
+            small.innerText = message;
+        }
+        
+        function setSuccessFor(input) {
+            const inputBox = input.parentElement;
+            inputBox.className = 'input-box success';
+        }
+            
+        function isPhone(phonenumber1) {
+            return /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phonenumber1);
+        }
+
+        function isEmail(email) {
+            return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+        }
+
+       
+
+      </script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>            
+
     
 </body>
 </html>

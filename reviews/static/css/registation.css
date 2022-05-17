@@ -52,9 +52,15 @@ body{
 }
 form .user-details .input-box{
     width: calc(100% / 2 - 35px);
-    margin-bottom: 20px;
+    margin-bottom: 20px;  
+}
+
+#phonenumber{
+    width: 170px;
+    margin-bottom: 2px;
     
 }
+
 .user-details .input-box .details{
     display: block;
     font-weight: 500;
@@ -71,7 +77,7 @@ form .user-details .input-box{
     visibility: hidden;
     position: relative;
     bottom: 0;
-    left: 0;
+    right: 40px;
 }
 
 .user-details .input-box input,select{
@@ -226,5 +232,10 @@ form .submit-session .button2:hover{
         left:230px;
         bottom:30px;
     } 
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
