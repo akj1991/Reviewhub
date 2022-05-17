@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-
+    <!-- <script src="{% static '/javaScript/registration.js' %}"></script> -->
 
 </head>
 <body>
@@ -22,25 +22,32 @@
     </div>
     <div class="container">
         <div class="title">Registration</div>
-        <form action="#" id="form">
-            <div class="user-details">
-                <div class="input-box">
+        <form action="#" >
+            <div class="user-details" id="form">
+                <div class="input-box success">
                     <span class="details">Full name</span>
-                    <input type="text" placeholder="Enter your name" required>
-                    
+                    <input type="text" placeholder="Enter your name" id="name" onkeyup="return validation()">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
-                <div class="input-box">
+                <div class="input-box error">
                     <span class="details">Username</span>
-                    <input type="text" placeholder="Enter your username" required>
-                    
+                    <input type="text" placeholder="Enter your username" id="username" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Email</span>
-                    <input type="text" placeholder="Enter your email" required>
+                    <input type="text" placeholder="Enter your email" id="email" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Phone number</span>
-                    <select name="countryCode" id="">
+                    <select name="countryCode" id="phonenumber">
                         <option data-countryCode="IN" value="91" selected>India (+91)</option>
                         <option data-countryCode="GB" value="44">UK (+44)</option>
                         <option data-countryCode="US" value="1">USA (+1)</option>
@@ -258,10 +265,14 @@
                             <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                             <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
                         </optgroup>
-                    </select>                </div>
+                    </select>  
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>              
+                </div>
                 <div class="input-box">
                     <span class="details">Nationality</span>
-                    <select name="nationality">
+                    <select name="nationality" id="nationality">
                         <option value="">-- select one --</option>
                         <option value="afghan">Afghan</option>
                         <option value="albanian">Albanian</option>
@@ -456,28 +467,40 @@
                         <option value="zambian">Zambian</option>
                         <option value="zimbabwean">Zimbabwean</option>
                       </select>
+                      <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Age</span>
-                    <input type="number" placeholder="Enter your Age" required>
+                    <input type="number" placeholder="Enter your Age" id="age" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Password</span>
-                    <input type="password" placeholder="Enter your password" required>
+                    <input type="password" placeholder="Enter your password" id="password" onkeyup="return validation()">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
                 <div class="input-box">
                     <span class="details">Confirm Password</span>
-                    <input type="password" placeholder="Confirm your password" required>
+                    <input type="password" placeholder="Confirm your password" id="repassword" required>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
 
             </div>
-            <div class="gender-details">
+            <div class="gender-details" id="gender">
                 <input type="radio" name="gender" id="dot-1">
                 <input type="radio" name="gender" id="dot-2">
                 <input type="radio" name="gender" id="dot-3">
 
                 <span class="gender-title">Gender</span>
-                <div class="category">
+                <div class="category" >
                     <label for="dot-1">
                         <span class="dot one"></span>
                         <span class="gender">Male</span>
@@ -491,6 +514,9 @@
                         <span class="gender">Prefer not to say</span>
                     </label>
                 </div>
+                <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
             </div>
             <div class="form-check" >
                 <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
@@ -498,6 +524,9 @@
                   I agree all statements in <a href="#!">Terms of service</a>
                 </label>
               </div>
+              <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
             <div class="submit-session">
                 
                 <button type="reset" class="button1" >Reset all</button>
@@ -522,6 +551,48 @@
     </div>
         </form>
     </div>
+
+
+<script>
+    function validation(){
+        status=1
+         user=document.getElementById('username')
+         pass=document.getElementById('password').value
+         if(user.value == ""){
+             //username.style.borderColor="red"
+             //username_error.innerHTML="Please Enter Username"
+             document.getElementById('username_error').innerHTML="Please Enter Username"
+             document.getElementById('username').style.borderColor="red"
+             username_error.style.color="red"
+             username_error.style.display="block"
+             status=0
+         }
+         else{
+             username.style.borderColor="black"
+             username_error.style.display="none"
+             status=1
+         }
+         if(pass==""){
+            document.getElementById('password').style.borderColor="red" 
+            document.getElementById('password_error').innerHTML="Please Enter Password"
+            password_error.style.display="block"
+            password_error.style.color="red"
+            status=0
+           } 
+           else{
+            password.style.borderColor="black"
+            password_error.style.display="none"
+            status=1
+        }
+        if(status==0){
+            return false
+        }
+        else if(status==1){
+            return true
+       }
+    
+        }
+</script>
     
 </body>
 </html>

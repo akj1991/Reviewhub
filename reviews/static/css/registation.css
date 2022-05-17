@@ -6,7 +6,7 @@
     font-family: 'Poppins',sans-serif;
 }
 body{
-    height: 850px;
+    height: 960px;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #71b7e6, #9b59b6);
@@ -51,7 +51,7 @@ body{
     
 }
 form .user-details .input-box{
-    width: calc(100% / 2 - 20px);
+    width: calc(100% / 2 - 35px);
     margin-bottom: 20px;
     
 }
@@ -60,6 +60,20 @@ form .user-details .input-box{
     font-weight: 500;
     margin-bottom: 5px;
 }
+.input-box i{
+    position: relative;
+    left:273px;
+    bottom:30px; 
+    visibility: hidden;
+}
+
+.input-box small{
+    visibility: hidden;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
 .user-details .input-box input,select{
    height: 35px;
    width: 100%; 
@@ -71,10 +85,30 @@ form .user-details .input-box{
    border-bottom-width: 2px;
    transition: all 0.3s ease;
 }
-.user-details .input-box input,select:focus,
+.user-details .success input{
+    border-color: #2ecc71;
+}
+
+.user-details .error input{
+    border-color: #e74c3c;
+}
+.user-details .success .fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
+.user-details .error .fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
+.user-details .error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/* .user-details .input-box input,select:focus,
 .user-details .input-box input,select:valid{
     border-color: #9b59b6;
-}
+} */
 form .gender-details .gender-title{
     font-size: 20px;
     font-weight: 500;
@@ -82,7 +116,7 @@ form .gender-details .gender-title{
 form .gender-details .category{
     display: flex;
     width: 80%;
-    margin: 14px 0;
+    margin: 14px 0 0 0;
     justify-content: space-between;
 }
 .gender-details .category label{
@@ -140,7 +174,29 @@ form .submit-session .button2:hover{
     margin: 20px 0;
     text-align: center;
 } 
-@media (max-width: 584px){
+@media (max-width: 1150px){
+    .input-box i{
+        position: relative;
+        left:230px;
+        bottom:30px;
+    } 
+}
+@media (max-width: 1040px){
+    .input-box i{
+        position: relative;
+        left:200px;
+        bottom:30px;
+    } 
+}
+@media (max-width: 940px){
+    .input-box i{
+        position: relative;
+        left:150px;
+        bottom:30px;
+    } 
+}
+
+@media (max-width: 770px){
     .container{
         max-width: 100%;
     } 
@@ -158,4 +214,17 @@ form .submit-session .button2:hover{
     .user-details::-webkit-scrollbar{
        width: 0; 
     }
+    .input-box i{
+        position: relative;
+        left:320px;
+        bottom:30px; 
+    }
 }
+@media (max-width: 645px){
+    .input-box i{
+        position: relative;
+        left:230px;
+        bottom:30px;
+    } 
+}
+
