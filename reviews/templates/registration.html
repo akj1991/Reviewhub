@@ -24,7 +24,7 @@
     </div>
     <div class="container">
         <div class="title">Registration</div>
-        <form action="#" id="form" name="">
+        <form action="#" id="form" name="contact">
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Full name</span>
@@ -497,7 +497,7 @@
                 </div>
 
             </div>
-            <div class="gender-details" id="gender">
+            <div class="gender-details" id="gender" >
                 <input type="radio" name="gender" id="dot-1">
                 <input type="radio" name="gender" id="dot-2">
                 <input type="radio" name="gender" id="dot-3">
@@ -516,10 +516,11 @@
                         <span class="dot three"></span>
                         <span class="gender">Prefer not to say</span>
                     </label>
-                </div>
-                <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
+                </div>
+                
             </div>
             <br>
             <div class="form-check" >
@@ -528,9 +529,9 @@
                   I agree all statements in <a href="#!">Terms of service</a>
                 </label>
               </div>
-              <i class="fas fa-check-circle"></i>
-                    <i class="fas fa-exclamation-circle"></i>
-                    <small>Error message</small>
+              <small id="message"><i class="fas fa-exclamation-circle"></i>
+              </small>
+              
             <div class="submit-session">
                 
                 <button type="reset" class="button1">Reset all</button>
@@ -569,14 +570,28 @@
         const age = document.getElementById('age');
         const password = document.getElementById('password');
         const repassword = document.getElementById('repassword');
-      //  const gender = document.getElementsByName("gender");
+        const checkbox = document.getElementById('form2Example3c')
+        const message = document.getElementById('message')
+        
         
         form.addEventListener('submit', e=> {
-            e.preventDefault();
+           e.preventDefault();
         
             checkInputs();
         });
+
+        form.addEventListener('submit', function validateCheckbox(e) {
+            e.preventDefault()
+            if (checkbox.checked === true) {
+                message.innerHTML = 'Done'
+                message.style.color ='#2ecc71'
+            }
+            else {
+                message.innerHTML = 'Please agree terms of service'
+            }
+        })
         
+
         function checkInputs() {
             const nameValue = name.value.trim();
             const usernameValue = username.value.trim();
@@ -586,7 +601,7 @@
             const nationalityValue = nationality.value.trim();
             const ageValue = age.value.trim();
             const phonenumberValue = phonenumber1.value.trim();
-           // const genderValue = gender.value.trim();
+           
         
             if(nameValue === '') {
                 setErrorFor(name, 'Name cannot be blank');
@@ -642,11 +657,6 @@
                 setSuccessFor(repassword);
             }
 
-            //if( (gender[0].checked == false) && (gender[1].checked == false)){
-           //     setErrorFor(gender, 'Please provide your gender!');
-           // }   else{
-            //        setSuccessFor(gender);
-             //   }
             if(genderValue === '') {
                 setErrorFor(gender, 'Name cannot be blank');
             } else {
@@ -655,12 +665,9 @@
         }
         
         function setErrorFor(input, message) {
-            const inputBox = input.parentElement;
-           // const genderBox = input.gender-details;
+            const inputBox = input.parentElement; 
             const small = inputBox.querySelector('small');
-            //const small1 = genderBox.querySelector('small');
             inputBox.className = 'input-box error';
-           // genderBox.className = 'gender-details error';
             small.innerText = message;
         }
         

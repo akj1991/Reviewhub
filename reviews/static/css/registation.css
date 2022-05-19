@@ -74,11 +74,18 @@ form .user-details .input-box{
 }
 
 .input-box small{
-    visibility: hidden;
+    
     position: relative;
     bottom: 0;
     right: 40px;
 }
+.category small{
+    visibility: hidden;
+}
+.category i{
+    visibility: hidden;
+}
+
 
 .user-details .input-box input,select{
    height: 35px;
@@ -102,11 +109,23 @@ form .user-details .input-box{
     visibility: visible;
     color: #2ecc71;
 }
+.gender-details .success .fa-check-circle{
+    visibility: visible;
+    color: #2ecc71;
+}
 .user-details .error .fa-exclamation-circle{
     visibility: visible;
     color: #e74c3c;
 }
+.gender-details .error .fa-exclamation-circle{
+    visibility: visible;
+    color: #e74c3c;
+}
 .user-details .error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+.gender-details .error small{
     visibility: visible;
     color: #e74c3c;
 }
@@ -239,3 +258,6 @@ a {
     color: #fff;
 }
 
+#message{
+    color: #e74c3c;;
+}
