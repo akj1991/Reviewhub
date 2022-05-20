@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="icon" href="{% static 'images/logohub.png' %}">
-    <link rel="stylesheet" href="{% static '/css/registation.css' %}">
+    <link rel="stylesheet" href="{% static 'css/registation.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -497,7 +497,7 @@
                 </div>
 
             </div>
-            <div class="gender-details" id="gender" >
+            <div class="gender-details" id="gender">
                 <input type="radio" name="gender" id="dot-1">
                 <input type="radio" name="gender" id="dot-2">
                 <input type="radio" name="gender" id="dot-3">
@@ -516,11 +516,10 @@
                         <span class="dot three"></span>
                         <span class="gender">Prefer not to say</span>
                     </label>
-                    <i class="fas fa-check-circle"></i>
+                </div>
+                <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
-                </div>
-                
             </div>
             <br>
             <div class="form-check" >
@@ -529,9 +528,8 @@
                   I agree all statements in <a href="#!">Terms of service</a>
                 </label>
               </div>
-              <small id="message"><i class="fas fa-exclamation-circle"></i>
-              </small>
               
+                    <small id="message"></small>
             <div class="submit-session">
                 
                 <button type="reset" class="button1">Reset all</button>
@@ -557,9 +555,6 @@
         </form>
     </div>
 
-    
-
-   
 <script>
         const form = document.getElementById('form');
         const name = document.getElementById('name');
@@ -570,28 +565,38 @@
         const age = document.getElementById('age');
         const password = document.getElementById('password');
         const repassword = document.getElementById('repassword');
+        const gender = document.getElementsByName("gender");
         const checkbox = document.getElementById('form2Example3c')
         const message = document.getElementById('message')
         
-        
         form.addEventListener('submit', e=> {
-           e.preventDefault();
+            e.preventDefault();
         
             checkInputs();
         });
 
-        form.addEventListener('submit', function validateCheckbox(e) {
-            e.preventDefault()
-            if (checkbox.checked === true) {
-                message.innerHTML = 'Done'
-                message.style.color ='#2ecc71'
+        document.contact.onsubmit=function(){
+            if(this.gender[0].checked==false && this.gender[1].checked==false){
+                setErrorFor(gender, 'Name cannot be blank');
+                return false;
             }
-            else {
-                message.innerHTML = 'Please agree terms of service'
-            }
-        })
-        
+            else{
+                alert("Thanks ");
+           }
+        }
 
+       form.addEventListener('submit', function validateCheckbox(e) {
+        e.preventDefault()
+        if (checkbox.checked === true) {
+            message.innerHTML = 'Done'
+            message.style.color ='#2ecc71'
+        }
+        else {
+            message.innerHTML = 'Please agree terms of service'
+        }
+    })
+        
+        
         function checkInputs() {
             const nameValue = name.value.trim();
             const usernameValue = username.value.trim();
@@ -601,7 +606,7 @@
             const nationalityValue = nationality.value.trim();
             const ageValue = age.value.trim();
             const phonenumberValue = phonenumber1.value.trim();
-           
+            //const genderValue = gender.value.trim();
         
             if(nameValue === '') {
                 setErrorFor(name, 'Name cannot be blank');
@@ -657,15 +662,26 @@
                 setSuccessFor(repassword);
             }
 
-            if(genderValue === '') {
-                setErrorFor(gender, 'Name cannot be blank');
-            } else {
-                setSuccessFor(gender);
-            }
+           // if( (gender[0].checked == false) && (gender[1].checked == false)){
+              // setErrorFor(gender, 'Please provide your gender!');
+               //alert ("thanks")
+           // }   else{
+              //     setSuccessFor(gender);
+              //  }
+            //if(genderValue === '') {
+              // setErrorFor(gender, 'Name cannot be blank');
+           // } else {
+            //    setSuccessFor(gender);
+           // }
         }
         
         function setErrorFor(input, message) {
-            const inputBox = input.parentElement; 
+            //console.log(input)
+            //if (input == "gender"){
+                //console.log("thanks")
+            //}
+            
+            const inputBox = input.parentElement;
             const small = inputBox.querySelector('small');
             inputBox.className = 'input-box error';
             small.innerText = message;
