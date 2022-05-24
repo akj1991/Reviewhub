@@ -1,5 +1,9 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from random import random
+from django.shortcuts import redirect, render
+from . models import *
+
+
+from reviews.models import Registration
 
 # Create your views here.
 def homefun(request):
@@ -18,6 +22,18 @@ def adminhomefun(request):
     return render (request,'admindashboard.html')
 
 def signupfun(request):
+    if request.method=='POST':
+        fullname = request.POST['fullname']
+        username = request.POST['username']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        nationality = request.POST['nationality']
+        age = request.POST['age']
+        password = request.POST['password']
+        repassword = request.POST['repassword']
+        details = Registration(fullname=fullname,username=username,email=email,phone=phone,nationality=nationality,age=age,password=password,repassword=repassword)
+        details.save()
+        return redirect("creator")
     return render (request,'registration.html')
 
 def creatorfun(request):
