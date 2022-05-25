@@ -5,27 +5,33 @@
 <table class="creator-table">
     <thead>
     <tr>
-        <th>No.</th>
-        <th>Name</th>
+        <!-- <th>No.</th> -->
+        <th>Full Name</th>
         <th>Username</th>
-        <th>Password</th>
         <th>Email</th>
+        <th>Phone Number</th>
         <th>Nationality</th>
         <th>Age</th>
-        <th>Added Date</th>
+        <th>Password</th>
+        <th>Repassword</th>
     </tr>
     </thead>
     <tbody>
+        {% for i in info %}
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <!-- <td>{{ i.No. }}</td> -->
+            <td>{{ i.fullname }}</td>
+            <td>{{ i.username }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.phone }}</td>
+            <td>{{ i.nationality }}</td>
+            <td>{{ i.age }}</td>
+            <td>{{ i.password }}</td>
+            <td>{{ i.repassword }}</td>
+            <td><button><a href="/delete/{{ i.id }}">Delete</a></button></td>
+            <td><button><a href="/update/{{ i.id }}">Update</a></button></td>
         </tr>
+        {% endfor %}
         <!-- <tr>
             <td>2</td>
             <td>Akhil</td>
@@ -35,6 +41,8 @@
             <td>Indian</td>
             <td>30</td>
             <td>18/05/2022</td>
+            <td><button><a href="/delete/{{ i.id }}">Delete</a></button></td>
+            <td><button><a href="creator/update/{{ i.id }}">Update</a></button></td>
         </tr>
         <tr>
             <td>3</td>

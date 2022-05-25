@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from . models import *
 
 
-from reviews.models import Registration
+# from reviews.models import Registration
 
 # Create your views here.
 def homefun(request):
@@ -37,7 +37,29 @@ def signupfun(request):
     return render (request,'registration.html')
 
 def creatorfun(request):
-    return render (request,'creator.html')
+    infodetails = Registration.objects.all()
+    return render (request,'creator.html',{'info': infodetails})
+
+def deletefun(request,id):
+    Registration.objects.get(id=id).delete()
+    return redirect ('creator')
+
+def updatefun(request,id):
+    updatedata = ''
+    if request.method == 'POST':
+        fullname = request.POST['fullname']
+        username = request.POST['username']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        nationality = request.POST['nationality']
+        age = request.POST['age']
+        password = request.POST['password']
+        repassword = request.POST['repassword']
+        Registration.objects.filter(id=id).update(fullname=fullname,username=username,email=email,phone=phone,nationality=nationality,age=age,password=password,repassword=repassword)
+        return redirect ('creator')
+    else:
+        updatedata = Registration.objects.get(id=id)
+    return render (request,'updateform.html',{'update':updatedata} )
 
 def viewerfun(request):
     return render (request,'viewers.html')
